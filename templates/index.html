@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10090d">
+    <title>Para ANACELI ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="fondo-luces"></div>
+<div class="grano"></div>
+<canvas id="confeti"></canvas>
+
+<button id="boton-musica" class="musica">
+    ♫ <span id="estado-musica">Activar música</span>
+</button>
+
+<audio id="piano" loop preload="none">
+    <source src="{{ url_for('static', filename='audio/fiesta.mp3') }}" type="audio/mpeg">
+</audio>
+
+<main>
+
+    <!-- PORTADA -->
+    <section id="portada" class="pantalla portada">
+        <div class="contenido">
+            <p class="etiqueta">✦ UNA HISTORIA ESCRITA CON EL CORAZÓN ✦</p>
+
+            <p class="caligrafia">Para alguien extraordinaria...</p>
+
+            <h1>ANACELI<span>♥</span></h1>
+
+            <div class="separador">✧</div>
+
+            <p class="introduccion">
+                Hoy el mundo celebra el día en que llegaste a él.
+                Yo celebro la suerte de que nuestros caminos se encontraran.
+            </p>
+
+            <button id="comenzar" class="boton boton-dorado">
+                Tengo una sorpresa para ti ♡
+            </button>
+
+            <p class="nota">UNA PEQUEÑA HISTORIA PARA TI</p>
+        </div>
+
+        <div class="rosa rosa-izquierda">✿</div>
+        <div class="rosa rosa-derecha">✿</div>
+    </section>
+
+
+    <!-- CARTA -->
+    <section id="carta" class="pantalla oculta">
+        <header class="encabezado">
+            <p class="etiqueta">PALABRAS QUE NACEN DEL ALMA</p>
+            <h2>Mi querida <span>ANACELI</span></h2>
+            <p>Si pudiera regalarte algo más que palabras...</p>
+        </header>
+
+        <article class="papel">
+            <div class="adorno">❦</div>
+
+            <p class="saludo">Un sueño llamado Farmacia,</p>
+
+            <p>
+                Hoy es tu cumpleaños y quisiera encontrar las palabras
+                capaces de expresar todo lo que siento por ti.
+                Tal vez no existan palabras suficientes, pero quiero
+                intentarlo, porque mereces saber lo especial que eres.
+            </p>
+
+            <p>
+                Desde que llegaste a mi vida, hay pequeños momentos
+                que tienen un brillo diferente. Una sonrisa tuya puede
+                cambiar mi día, una conversación contigo puede quedarse
+                en mis pensamientos y un recuerdo bonito a tu lado puede
+                hacerme sonreír incluso cuando no estás cerca.
+            </p>
+
+            <p>
+                No quiero desearte solamente un cumpleaños feliz.
+                Quiero desearte una vida llena de motivos para sonreír,
+                sueños que se hagan realidad, personas que te quieran
+                de verdad y fuerzas para superar cualquier dificultad.
+                Deseo que nunca olvides lo valiosa, hermosa y especial
+                que eres.
+            </p>
+
+            <p>
+                Si pudiera pedir algo por ti, pediría que la vida
+                sea amable con tu corazón. Que nunca tengas que apagar
+                tu luz para hacer feliz a alguien, que siempre encuentres
+                razones para seguir adelante y que cada nuevo amanecer
+                te acerque a la vida que sueñas.
+            </p>
+
+            <p>
+                No puedo prometerte que todos los días serán perfectos,
+                pero sí creo que las cosas bonitas se construyen con
+                sinceridad, respeto, paciencia y detalles pequeños.
+                Quiero que nunca te falten motivos para sentirte querida,
+                escuchada y valorada.
+            </p>
+
+            <p>
+                Hoy comienza un nuevo capítulo de tu vida.
+                Ojalá esté lleno de aventuras, aprendizajes,
+                abrazos sinceros y recuerdos que algún día puedas
+                mirar con una sonrisa enorme.
+            </p>
+
+            <p class="frase-especial">
+                Feliz cumpleaños, ANACELI.
+                Gracias por existir, por ser tú y por ocupar
+                un lugar tan especial en mi corazón.
+                Deseo de todo corazón que seas inmensamente feliz.
+            </p>
+
+            <p class="firma">
+                Con todo mi cariño,
+                <span>alguien que te quiere muchísimo ♥</span>
+            </p>
+
+            <div class="adorno">❦</div>
+        </article>
+
+        <button class="boton boton-borde siguiente" data-ir="cumple">
+            Hay algo más para ti →
+        </button>
+    </section>
+
+
+    <!-- CUMPLEAÑOS -->
+    <section id="cumple" class="pantalla oculta">
+        <header class="encabezado">
+            <p class="etiqueta">HOY ES TU DÍA</p>
+            <h2>Pide un deseo, <span>ANACELI</span></h2>
+            <p>Cierra los ojos un instante y piensa en algo que tu corazón anhele.</p>
+        </header>
+
+        <div class="escenario-torta">
+            <div class="torta">
+                <div class="velas">
+                    <div class="vela"><i class="llama"></i></div>
+                    <div class="vela"><i class="llama"></i></div>
+                    <div class="vela"><i class="llama"></i></div>
+                </div>
+
+                <div class="capa superior"></div>
+                <div class="capa inferior"></div>
+                <div class="plato"></div>
+            </div>
+
+            <p id="mensaje-torta" class="mensaje-torta">
+                Tres pequeñas luces para todos tus deseos.
+            </p>
+        </div>
+
+        <div class="acciones">
+            <button id="apagar" class="boton boton-dorado">
+                Apagar las velitas ✨
+            </button>
+
+            <button id="celebrar" class="boton boton-borde">
+                ¡Que llueva alegría! 🎉
+            </button>
+        </div>
+
+        <p class="nota">
+            Que este nuevo año te regale paz, amor y sueños cumplidos.
+        </p>
+
+        <button class="boton boton-borde siguiente" data-ir="regalo">
+            Descubrir mi último regalo →
+        </button>
+    </section>
+
+
+    <!-- REGALO SECRETO -->
+    <section id="regalo" class="pantalla oculta">
+        <header class="encabezado">
+            <p class="etiqueta">SOLO PARA TI</p>
+            <h2>Algo que guardé <span>para el final</span></h2>
+            <p>Hay regalos que no necesitan envoltura, solamente corazón.</p>
+        </header>
+
+        <button id="caja-regalo" class="caja-regalo"
+                aria-label="Abrir regalo secreto">
+            <div class="tapa">
+                <span>∞</span>
+            </div>
+            <div class="caja">
+                <div class="cinta"></div>
+            </div>
+            <span class="instruccion">Toca para abrir tu regalo ♥</span>
+        </button>
+
+        <article id="mensaje-secreto" class="mensaje-secreto oculta">
+            <p class="etiqueta">MI DESEO MÁS SINCERO</p>
+
+            <h3>Para ti, ANACELI ❤️</h3>
+
+            <p>
+                Si pudiera pedir un deseo por ti, pediría que nunca
+                te falte la certeza de que eres alguien maravillosa.
+                Que la vida te devuelva multiplicada toda la bondad
+                que entregas y que siempre encuentres belleza incluso
+                en los días más sencillos.
+            </p>
+
+            <p>
+                Deseo que tus sueños no se queden solamente en tu
+                imaginación, que tengas valentía para perseguirlos
+                y que, cuando el camino se vuelva difícil, encuentres
+                dentro de ti la fuerza para continuar. Espero que nunca 
+                pierdas esa ilusión que te impulsa a crecer, que te sientas 
+                orgullosa de cada pequeño logro y que, incluso en los días difíciles, 
+                recuerdes todo lo que eres capaz de conseguir. Que tu futuro esté lleno de éxitos, 
+                que tus conocimientos te permitan ayudar a muchas personas y que tu corazón conserve 
+                siempre esa luz tan bonita que te hace especial. 🌷🩺
+            </p>
+
+            <p>
+                Nunca dejes de creer en ti, ANACELI. Estoy seguro de que te esperan cosas maravillosas 
+                y deseo que algún día puedas mirar atrás, sonreír y sentirte orgullosa de todo lo que 
+                luchaste para llegar hasta donde siempre soñaste. ❤️
+            </p>
+
+            <p class="dedicatoria-final">
+                Feliz cumpleaños, ANACELI.<br>
+                Que la vida te sonría hoy, mañana y siempre.<br>
+                <span>Te mereces cosas preciosas. ♥</span>
+            </p>
+
+            <div class="corazon">♥</div>
+        </article>
+
+        <button id="reiniciar" class="boton boton-borde oculta">
+            Volver a vivir la sorpresa ↺
+        </button>
+
+        <footer>
+            Hecho con cariño, especialmente para ANACELI ♥
+        </footer>
+    </section>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
